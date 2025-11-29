@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 300px; font-family: sans-serif; padding: 10px; }
+    .card { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+    button { padding: 5px 10px; cursor: pointer; }
+    .btn-approve { background-color: #4CAF50; color: white; border: none; }
+    .btn-discard { background-color: #f44336; color: white; border: none; }
+    .btn-run { background-color: #008CBA; color: white; border: none; width: 100%; margin-top:5px;}
+  </style>
+</head>
+<body>
+  <h3>Auto-Flow</h3>
+  
+  <div id="proposal-section" style="display:none;">
+    <div class="card">
+      <h4>Pattern Detected!</h4>
+      <p>We noticed you performed a sequence 3 times.</p>
+      <code id="pattern-preview"></code>
+      <br><br>
+      <button id="approve" class="btn-approve">Approve & Save</button>
+      <button id="discard" class="btn-discard">Discard</button>
+    </div>
+  </div>
+
+  <div id="saved-workflows">
+    <h4>Your Automations</h4>
+    <div id="workflow-list"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
